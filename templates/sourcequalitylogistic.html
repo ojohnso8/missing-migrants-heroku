@@ -51,10 +51,41 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-6" id="left-block">
-                <h1>Predictive Analysis</h1>
-                <img src="total_dead.png" width="400" height="350">
-                <p> We attempted to use a series of linear and logistical regressions to try and predict the number of
-                    total dead and missing.</p>
+                <h1>Source Quality Logistic Regression/h1>
+                    <img src="Log_ROC.png" width="400" height="350">
+                    <p>From the data manipulation above and the data visulization we did before, we decide to work on
+                        the
+                        problem that how other variables contribuate to the “Source Quality”. From EDA, there are some
+                        points have to be noticed, most variables are not quantifiable, so we have to convert them to
+                        dummy
+                        variables to build our model.
+                        For the “Source Quality”, I decide to distinguish them to 0(<=3) and 1(>3) and 0 for unreliable
+                            and
+                            1 for reliable. For the “Region of Incident”, we create 15 dummy variables instead of one
+                            column. For the “URL”, since there are more than 1000 unique links which are hard to deal
+                            with,
+                            we convert it to 0 and 1, 0 means website is unaviliable and 1 means website is aviliable.
+                            Before model building, I want to check whether our data is oversampled. With our training
+                            data
+                            Created, I up-sampled the data with SMOTE algorithm. Then we can have a perfect balanced
+                            data.
+                            After that, I use Recursive Feature Elimination (RFE) to select features. And the result
+                            showed
+                            our variables are good to use.
+                            At last, I build two model: the first is Logistic Regression and second is Neural Network.
+                            Based
+                            on my experience, I guess around so many statistics models and algorithm models, these two
+                            may
+                            perform better. The logistic regression model performed very well, it has an 83% accuracy.
+                            And I
+                            tried different layers, units and tuned different parameters in the NN model, the best
+                            accuray
+                            is 61%, otherwise it would be overfitting or inaccurate. And compared to other models that
+                            Hemani built, the logistic regression model still is the best.
+                            From the result, we can tell that most of our variables contributes a lot to the reliablity
+                            under the 0.05 significance level. P-value of “Central Asia” and “North American” is large,
+                            this
+                            may means reliablity of incidents happened here may hard to be tell. </p>
             </div>
             <div class="col-md-4 sidebar">
                 <div class="row">
