@@ -22,6 +22,10 @@ def render_markermap():
 def render_plots():
     return render_template('plots.html')
 
+@app.route('/predictiveanalysis.html')
+def render_plots():
+    return render_template('predictiveanalysis.html')
+
 @app.route('/data.html')
 def render_data():
     return render_template('data.html')
