@@ -98,7 +98,7 @@
     height: 550px;
     padding: 20px;
     margin: 0;
-    background: black;
+    /* background: black; */
     background-image: url("static/img/Migration.png");
     background-attachment: fixed;
     background-position: bottom center;
