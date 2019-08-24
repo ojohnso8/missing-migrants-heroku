@@ -23,23 +23,23 @@ def render_plots():
     return render_template('plots.html')
 
 @app.route('/predictiveanalysis.html')
-def render_plots():
+def render_predictiveanalysis():
     return render_template('predictiveanalysis.html')
 
 @app.route('/temperature.html')
-def render_plots():
+def render_temperature():
     return render_template('temperature.html')
 
 @app.route('/totaldead.html')
-def render_plots():
+def render_totaldead():
     return render_template('totaldead.html')
 
 @app.route('/sourcequalitylinear.html')
-def render_plots():
+def render_sourcequalitylinear():
     return render_template('sourcequalitylinear.html')
 
 @app.route('/sourcequalitylogistic.html')
-def render_plots():
+def render_sourcequalitylogistic():
     return render_template('sourcequalitylogistic.html')
 
 @app.route('/data.html')
